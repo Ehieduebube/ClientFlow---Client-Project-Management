@@ -11,7 +11,7 @@ function ChartTooltip({ active, payload }: { active?: boolean; payload?: { paylo
   return (
     <div className="rounded-md border border-ink-200 bg-white px-3 py-2 text-xs shadow-md">
       <p className="font-medium text-ink-900">Week of {label}</p>
-      <p className="text-ink-500">{completed} {completed === 1 ? 'task' : 'tasks'} completed</p>
+      <p className="text-ink-600">{completed} {completed === 1 ? 'task' : 'tasks'} completed</p>
     </div>
   )
 }
@@ -22,7 +22,7 @@ export function TaskCompletionChart({ data }: TaskCompletionChartProps) {
   return (
     <>
       <p className="mb-1 text-2xl font-semibold text-ink-900">{total}</p>
-      <p className="mb-3 text-xs text-ink-500">tasks completed in the last 8 weeks</p>
+      <p className="mb-3 text-xs text-ink-600">tasks completed in the last 8 weeks</p>
       <ResponsiveContainer width="100%" height={160}>
         <AreaChart data={data} margin={{ top: 4, right: 8, left: -16, bottom: 0 }}>
           <defs>

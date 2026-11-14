@@ -60,13 +60,13 @@ export function Modal({ isOpen, onClose, title, description, children, size = 'm
             <h2 id="modal-title" className="text-base font-semibold text-ink-900">
               {title}
             </h2>
-            {description && <p className="mt-0.5 text-sm text-ink-500">{description}</p>}
+            {description && <p className="mt-0.5 text-sm text-ink-600">{description}</p>}
           </div>
           <button
             type="button"
             onClick={onClose}
             aria-label="Close dialog"
-            className="shrink-0 rounded p-1 text-ink-400 hover:bg-ink-100 hover:text-ink-600"
+            className="shrink-0 rounded p-1 text-ink-500 hover:bg-ink-100 hover:text-ink-600"
           >
             <X className="h-4 w-4" />
           </button>

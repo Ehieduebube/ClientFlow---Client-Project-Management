@@ -56,7 +56,7 @@ export function RowMenu({ actions }: { actions: RowMenuAction[] }) {
         onClick={() => setIsOpen((v) => !v)}
         aria-label="Open row actions"
         aria-expanded={isOpen}
-        className="rounded p-1.5 text-ink-400 hover:bg-ink-100 hover:text-ink-600"
+        className="rounded p-1.5 text-ink-500 hover:bg-ink-100 hover:text-ink-600"
       >
         <MoreHorizontal className="h-4 w-4" />
       </button>

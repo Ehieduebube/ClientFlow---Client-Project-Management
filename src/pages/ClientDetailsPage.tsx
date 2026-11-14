@@ -69,7 +69,7 @@ export function ClientDetailsPage() {
 
   return (
     <div>
-      <Link to="/clients" className="mb-4 inline-flex items-center gap-1.5 text-sm text-ink-500 hover:text-ink-800">
+      <Link to="/clients" className="mb-4 inline-flex items-center gap-1.5 text-sm text-ink-600 hover:text-ink-800">
         <ArrowLeft className="h-3.5 w-3.5" /> Back to clients
       </Link>
 
@@ -79,7 +79,7 @@ export function ClientDetailsPage() {
             <h1 className="text-xl font-semibold text-ink-900 sm:text-2xl">{client.name}</h1>
             <ClientStatusBadge status={client.status} />
           </div>
-          {client.company && <p className="mt-1 text-sm text-ink-500">{client.company}</p>}
+          {client.company && <p className="mt-1 text-sm text-ink-600">{client.company}</p>}
         </div>
         <div className="flex shrink-0 items-center gap-2">
           <Button variant="secondary" size="sm" leftIcon={<Pencil className="h-3.5 w-3.5" />} onClick={() => setIsEditOpen(true)}>
@@ -93,11 +93,11 @@ export function ClientDetailsPage() {
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div className="rounded-lg border border-ink-200 bg-white p-4">
-          <p className="text-xs font-medium uppercase tracking-wide text-ink-400">Email</p>
+          <p className="text-xs font-medium uppercase tracking-wide text-ink-500">Email</p>
           <p className="mt-1 flex items-center gap-1.5 text-sm text-ink-800">
             {client.email ? (
               <>
-                <Mail className="h-3.5 w-3.5 text-ink-400" /> {client.email}
+                <Mail className="h-3.5 w-3.5 text-ink-500" /> {client.email}
               </>
             ) : (
               '—'
@@ -105,11 +105,11 @@ export function ClientDetailsPage() {
           </p>
         </div>
         <div className="rounded-lg border border-ink-200 bg-white p-4">
-          <p className="text-xs font-medium uppercase tracking-wide text-ink-400">Phone</p>
+          <p className="text-xs font-medium uppercase tracking-wide text-ink-500">Phone</p>
           <p className="mt-1 flex items-center gap-1.5 text-sm text-ink-800">
             {client.phone ? (
               <>
-                <Phone className="h-3.5 w-3.5 text-ink-400" /> {client.phone}
+                <Phone className="h-3.5 w-3.5 text-ink-500" /> {client.phone}
               </>
             ) : (
               '—'
@@ -117,14 +117,14 @@ export function ClientDetailsPage() {
           </p>
         </div>
         <div className="rounded-lg border border-ink-200 bg-white p-4">
-          <p className="text-xs font-medium uppercase tracking-wide text-ink-400">Client since</p>
+          <p className="text-xs font-medium uppercase tracking-wide text-ink-500">Client since</p>
           <p className="mt-1 text-sm text-ink-800">{formatDate(client.created_at)}</p>
         </div>
       </div>
 
       {client.notes && (
         <div className="mt-4 rounded-lg border border-ink-200 bg-white p-4">
-          <p className="text-xs font-medium uppercase tracking-wide text-ink-400">Notes</p>
+          <p className="text-xs font-medium uppercase tracking-wide text-ink-500">Notes</p>
           <p className="mt-1.5 whitespace-pre-line text-sm text-ink-700">{client.notes}</p>
         </div>
       )}
@@ -144,7 +144,7 @@ export function ClientDetailsPage() {
                   >
                     <div className="min-w-0">
                       <p className="truncate text-sm font-medium text-ink-900">{project.name}</p>
-                      <p className="text-xs text-ink-500">Deadline {formatDate(project.deadline)}</p>
+                      <p className="text-xs text-ink-600">Deadline {formatDate(project.deadline)}</p>
                     </div>
                     <ProjectStatusBadge status={project.status} />
                   </Link>
@@ -166,7 +166,7 @@ export function ClientDetailsPage() {
                 <li key={task.id} className="flex items-center justify-between gap-3 px-4 py-3">
                   <div className="min-w-0">
                     <p className="truncate text-sm font-medium text-ink-900">{task.title}</p>
-                    <p className="text-xs text-ink-500">{task.project?.name ?? 'No project'}</p>
+                    <p className="text-xs text-ink-600">{task.project?.name ?? 'No project'}</p>
                   </div>
                   <TaskStatusBadge status={task.status} />
                 </li>

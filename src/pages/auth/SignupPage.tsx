@@ -58,7 +58,7 @@ export function SignupPage() {
       >
         <div className="flex flex-col items-center gap-3 py-4 text-center">
           <CheckCircle2 className="h-8 w-8 text-brand-600" aria-hidden="true" />
-          <p className="text-sm text-ink-600">
+          <p className="text-sm text-ink-700">
             Once confirmed, sign in with the email and password you just created.
           </p>
         </div>

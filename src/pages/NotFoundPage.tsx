@@ -6,7 +6,7 @@ export function NotFoundPage() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-ink-50 px-4 text-center">
       <p className="text-sm font-medium text-brand-600">404</p>
       <h1 className="mt-2 text-xl font-semibold text-ink-900">Page not found</h1>
-      <p className="mt-1 text-sm text-ink-500">The page you're looking for doesn't exist.</p>
+      <p className="mt-1 text-sm text-ink-600">The page you're looking for doesn't exist.</p>
       <Link to="/" className="mt-6">
         <Button>Back to dashboard</Button>
       </Link>

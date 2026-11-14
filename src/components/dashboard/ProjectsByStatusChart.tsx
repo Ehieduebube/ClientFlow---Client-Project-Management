@@ -12,7 +12,7 @@ function ChartTooltip({ active, payload }: { active?: boolean; payload?: { paylo
   return (
     <div className="rounded-md border border-ink-200 bg-white px-3 py-2 text-xs shadow-md">
       <p className="font-medium text-ink-900">{label}</p>
-      <p className="text-ink-500">{count} {count === 1 ? 'project' : 'projects'}</p>
+      <p className="text-ink-600">{count} {count === 1 ? 'project' : 'projects'}</p>
     </div>
   )
 }
@@ -21,7 +21,7 @@ export function ProjectsByStatusChart({ data }: ProjectsByStatusChartProps) {
   const total = data.reduce((sum, d) => sum + d.count, 0)
 
   if (total === 0) {
-    return <p className="flex h-48 items-center justify-center text-sm text-ink-500">No projects yet.</p>
+    return <p className="flex h-48 items-center justify-center text-sm text-ink-600">No projects yet.</p>
   }
 
   return (

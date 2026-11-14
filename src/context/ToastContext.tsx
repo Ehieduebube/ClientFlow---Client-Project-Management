@@ -20,7 +20,7 @@ const ToastContext = createContext<ToastContextValue | undefined>(undefined)
 const VARIANT_STYLES: Record<ToastVariant, { icon: typeof CheckCircle2; iconClass: string }> = {
   success: { icon: CheckCircle2, iconClass: 'text-brand-600' },
   error: { icon: AlertCircle, iconClass: 'text-red-600' },
-  info: { icon: Info, iconClass: 'text-ink-500' },
+  info: { icon: Info, iconClass: 'text-ink-600' },
 }
 
 export function ToastProvider({ children }: { children: ReactNode }) {
@@ -60,13 +60,13 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               <div className="min-w-0 flex-1">
                 <p className="text-sm font-medium text-ink-900">{toast.title}</p>
                 {toast.description && (
-                  <p className="mt-0.5 text-sm text-ink-500">{toast.description}</p>
+                  <p className="mt-0.5 text-sm text-ink-600">{toast.description}</p>
                 )}
               </div>
               <button
                 type="button"
                 onClick={() => dismiss(toast.id)}
-                className="shrink-0 rounded p-0.5 text-ink-400 hover:bg-ink-100 hover:text-ink-600"
+                className="shrink-0 rounded p-0.5 text-ink-500 hover:bg-ink-100 hover:text-ink-600"
                 aria-label="Dismiss notification"
               >
                 <X className="h-4 w-4" />

@@ -7,7 +7,7 @@ import type { ProjectWithClient } from '@/types'
 
 export function RecentProjects({ projects }: { projects: ProjectWithClient[] }) {
   if (projects.length === 0) {
-    return <p className="py-6 text-sm text-ink-500">No projects yet.</p>
+    return <p className="py-6 text-sm text-ink-600">No projects yet.</p>
   }
 
   return (
@@ -20,7 +20,7 @@ export function RecentProjects({ projects }: { projects: ProjectWithClient[] }) 
                 <p className="truncate text-sm font-medium text-ink-900">{project.name}</p>
                 <ProjectStatusBadge status={project.status} />
               </div>
-              <p className="mt-1 text-xs text-ink-400">
+              <p className="mt-1 text-xs text-ink-500">
                 Updated {formatDistanceToNow(parseDate(project.updated_at), { addSuffix: true })}
               </p>
             </div>

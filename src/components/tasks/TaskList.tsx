@@ -52,7 +52,7 @@ export function TaskList({ tasks, showProject = false, onEdit, onDelete }: TaskL
                   <p
                     className={cn(
                       'truncate text-sm font-medium text-ink-900',
-                      task.status === 'done' && 'text-ink-400 line-through',
+                      task.status === 'done' && 'text-ink-500 line-through',
                     )}
                   >
                     {task.title}
@@ -73,9 +73,9 @@ export function TaskList({ tasks, showProject = false, onEdit, onDelete }: TaskL
                   <TaskStatusBadge status={task.status} />
                   <PriorityBadge priority={task.priority} />
                   {showProject && task.project && (
-                    <span className="text-xs text-ink-500">{task.project.name}</span>
+                    <span className="text-xs text-ink-600">{task.project.name}</span>
                   )}
-                  <span className={cn('text-xs', overdue ? 'font-medium text-red-600' : 'text-ink-500')}>
+                  <span className={cn('text-xs', overdue ? 'font-medium text-red-600' : 'text-ink-600')}>
                     {dueDateLabel(task.due_date)}
                   </span>
                 </div>

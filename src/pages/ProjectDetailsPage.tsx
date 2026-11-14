@@ -98,7 +98,7 @@ export function ProjectDetailsPage() {
 
   return (
     <div>
-      <Link to="/projects" className="mb-4 inline-flex items-center gap-1.5 text-sm text-ink-500 hover:text-ink-800">
+      <Link to="/projects" className="mb-4 inline-flex items-center gap-1.5 text-sm text-ink-600 hover:text-ink-800">
         <ArrowLeft className="h-3.5 w-3.5" /> Back to projects
       </Link>
 
@@ -110,7 +110,7 @@ export function ProjectDetailsPage() {
             <PriorityBadge priority={project.priority} />
           </div>
           {project.client && (
-            <Link to={`/clients/${project.client.id}`} className="mt-1 inline-block text-sm text-ink-500 hover:text-ink-800 hover:underline">
+            <Link to={`/clients/${project.client.id}`} className="mt-1 inline-block text-sm text-ink-600 hover:text-ink-800 hover:underline">
               {project.client.name}
             </Link>
           )}
@@ -125,31 +125,31 @@ export function ProjectDetailsPage() {
         </div>
       </div>
 
-      {project.description && <p className="mt-4 max-w-2xl text-sm text-ink-600">{project.description}</p>}
+      {project.description && <p className="mt-4 max-w-2xl text-sm text-ink-700">{project.description}</p>}
 
       <div className="mt-6 rounded-lg border border-ink-200 bg-white p-4">
         <div className="flex items-center justify-between">
           <p className="text-sm font-medium text-ink-800">Overall progress</p>
-          <p className="text-sm text-ink-500">{project.progress}%</p>
+          <p className="text-sm text-ink-600">{project.progress}%</p>
         </div>
         <ProgressBar value={project.progress} className="mt-2" />
         <div className="mt-4 grid grid-cols-2 gap-4 border-t border-ink-100 pt-4 sm:grid-cols-4">
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-ink-400">Start date</p>
+            <p className="text-xs font-medium uppercase tracking-wide text-ink-500">Start date</p>
             <p className="mt-1 text-sm text-ink-800">{formatDate(project.start_date)}</p>
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-ink-400">Deadline</p>
+            <p className="text-xs font-medium uppercase tracking-wide text-ink-500">Deadline</p>
             <p className="mt-1 text-sm text-ink-800">{formatDate(project.deadline)}</p>
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-ink-400">Tasks completed</p>
+            <p className="text-xs font-medium uppercase tracking-wide text-ink-500">Tasks completed</p>
             <p className="mt-1 text-sm text-ink-800">
               {taskStats.completed} of {taskStats.total}
             </p>
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-ink-400">Remaining</p>
+            <p className="text-xs font-medium uppercase tracking-wide text-ink-500">Remaining</p>
             <p className="mt-1 text-sm text-ink-800">{taskStats.remaining} {pluralize(taskStats.remaining, 'task')}</p>
           </div>
         </div>
@@ -185,7 +185,7 @@ export function ProjectDetailsPage() {
           <h2 className="text-sm font-semibold text-ink-900">Recent activity</h2>
           <div className="mt-3">
             {recentActivity.length === 0 ? (
-              <p className="text-sm text-ink-500">No activity yet.</p>
+              <p className="text-sm text-ink-600">No activity yet.</p>
             ) : (
               <ul className="flex flex-col gap-4">
                 {recentActivity.map((task) => (
@@ -194,7 +194,7 @@ export function ProjectDetailsPage() {
                       {task.status === 'done' ? (
                         <CheckSquare className="h-3.5 w-3.5 text-emerald-600" />
                       ) : task.created_at === task.updated_at ? (
-                        <PlusCircle className="h-3.5 w-3.5 text-ink-400" />
+                        <PlusCircle className="h-3.5 w-3.5 text-ink-500" />
                       ) : (
                         <CircleDot className="h-3.5 w-3.5 text-blue-500" />
                       )}
@@ -204,7 +204,7 @@ export function ProjectDetailsPage() {
                         <span className="font-medium text-ink-900">{task.title}</span>{' '}
                         {task.status === 'done' ? 'completed' : task.created_at === task.updated_at ? 'created' : 'updated'}
                       </p>
-                      <p className="text-xs text-ink-400">{formatDistanceToNow(parseDate(task.updated_at), { addSuffix: true })}</p>
+                      <p className="text-xs text-ink-500">{formatDistanceToNow(parseDate(task.updated_at), { addSuffix: true })}</p>
                     </div>
                   </li>
                 ))}

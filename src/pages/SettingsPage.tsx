@@ -10,7 +10,7 @@ function Panel({ title, description, children }: { title: string; description?: 
   return (
     <section className="rounded-lg border border-ink-200 bg-white p-5">
       <h2 className="text-sm font-semibold text-ink-900">{title}</h2>
-      {description && <p className="mt-1 text-sm text-ink-500">{description}</p>}
+      {description && <p className="mt-1 text-sm text-ink-600">{description}</p>}
       <div className="mt-4">{children}</div>
     </section>
   )
@@ -123,7 +123,7 @@ export function SettingsPage() {
         </Panel>
 
         <Panel title="Session">
-          <p className="text-sm text-ink-500">Signed in as {user?.email}</p>
+          <p className="text-sm text-ink-600">Signed in as {user?.email}</p>
           <Button variant="secondary" className="mt-4" onClick={signOut}>
             Sign out
           </Button>

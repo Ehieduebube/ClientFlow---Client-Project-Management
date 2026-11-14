@@ -45,7 +45,7 @@ export function StatsRow({
               stat.tone === 'warning' ? 'bg-red-50' : 'bg-ink-100'
             }`}
           >
-            <stat.icon className={`h-4 w-4 ${stat.tone === 'warning' ? 'text-red-600' : 'text-ink-500'}`} aria-hidden="true" />
+            <stat.icon className={`h-4 w-4 ${stat.tone === 'warning' ? 'text-red-600' : 'text-ink-600'}`} aria-hidden="true" />
           </div>
           <div>
             <p
@@ -55,7 +55,7 @@ export function StatsRow({
             >
               {stat.value}
             </p>
-            <p className="text-xs text-ink-500">{stat.label}</p>
+            <p className="text-xs text-ink-600">{stat.label}</p>
           </div>
         </div>
       ))}

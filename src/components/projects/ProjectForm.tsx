@@ -104,7 +104,7 @@ export function ProjectForm({ initialValue, defaultClientId, onSubmit, onCancel,
       <div className="flex flex-col gap-1.5">
         <label htmlFor="progress" className="flex items-center justify-between text-sm font-medium text-ink-700">
           <span>Progress</span>
-          <span className="text-ink-500">{progress}%</span>
+          <span className="text-ink-600">{progress}%</span>
         </label>
         <input
           id="progress"

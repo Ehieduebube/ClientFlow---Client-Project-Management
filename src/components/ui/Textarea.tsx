@@ -30,7 +30,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(function 
         aria-invalid={!!error}
         aria-describedby={errorId}
         className={cn(
-          'w-full resize-y rounded-md border bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-400',
+          'w-full resize-y rounded-md border bg-white px-3 py-2 text-sm text-ink-900 placeholder:text-ink-500',
           'transition-colors focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-brand-500',
           error ? 'border-red-400' : 'border-ink-300 hover:border-ink-400',
           'disabled:cursor-not-allowed disabled:bg-ink-100 disabled:text-ink-400',

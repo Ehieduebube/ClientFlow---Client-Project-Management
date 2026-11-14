@@ -19,12 +19,12 @@ export function AuthLayout({
             <span className="text-sm font-bold text-white">C</span>
           </div>
           <h1 className="mt-4 text-lg font-semibold text-ink-900">{title}</h1>
-          <p className="mt-1 text-sm text-ink-500">{description}</p>
+          <p className="mt-1 text-sm text-ink-600">{description}</p>
         </div>
 
         <div className="rounded-lg border border-ink-200 bg-white p-6 shadow-sm">{children}</div>
 
-        <p className="mt-6 text-center text-sm text-ink-500">{footer}</p>
+        <p className="mt-6 text-center text-sm text-ink-600">{footer}</p>
       </div>
     </div>
   )

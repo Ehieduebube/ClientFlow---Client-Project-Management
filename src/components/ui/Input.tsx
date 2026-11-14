@@ -32,7 +32,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         aria-describedby={cn(errorId, hintId) || undefined}
         className={cn(
           // text-base on mobile: iOS Safari auto-zooms into inputs smaller than 16px.
-          'h-9 w-full rounded-md border bg-white px-3 text-base text-ink-900 placeholder:text-ink-400 sm:text-sm',
+          'h-9 w-full rounded-md border bg-white px-3 text-base text-ink-900 placeholder:text-ink-500 sm:text-sm',
           'transition-colors focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-brand-500',
           error ? 'border-red-400' : 'border-ink-300 hover:border-ink-400',
           'disabled:cursor-not-allowed disabled:bg-ink-100 disabled:text-ink-400',
@@ -41,7 +41,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
         {...props}
       />
       {hint && !error && (
-        <p id={hintId} className="text-xs text-ink-500">
+        <p id={hintId} className="text-xs text-ink-600">
           {hint}
         </p>
       )}

@@ -25,7 +25,7 @@ export function Sidebar() {
             className={({ isActive }) =>
               cn(
                 'relative flex items-center gap-2.5 rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                isActive ? 'bg-white/10 text-white' : 'text-white/55 hover:bg-white/5 hover:text-white/90',
+                isActive ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white/90',
               )
             }
           >
@@ -54,7 +54,7 @@ export function Sidebar() {
             type="button"
             onClick={signOut}
             aria-label="Sign out"
-            className="shrink-0 rounded p-1.5 text-white/40 hover:bg-white/10 hover:text-white"
+            className="shrink-0 rounded p-1.5 text-white/75 hover:bg-white/10 hover:text-white"
           >
             <LogOut className="h-4 w-4" />
           </button>

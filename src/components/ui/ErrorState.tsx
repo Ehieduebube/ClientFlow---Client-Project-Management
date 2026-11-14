@@ -13,7 +13,7 @@ export function ErrorState({ message = 'Something went wrong while loading this 
         <AlertTriangle className="h-5 w-5 text-red-600" aria-hidden="true" />
       </div>
       <h3 className="mt-3 text-sm font-semibold text-ink-800">Couldn't load this data</h3>
-      <p className="mt-1 max-w-sm text-sm text-ink-500">{message}</p>
+      <p className="mt-1 max-w-sm text-sm text-ink-600">{message}</p>
       {onRetry && (
         <Button variant="secondary" size="sm" onClick={onRetry} className="mt-4">
           Try again

@@ -19,7 +19,7 @@ export function ProjectsTable({ projects, onEdit, onDelete }: ProjectsTableProps
     <div className="overflow-hidden rounded-lg border border-ink-200 bg-white">
       {/* Desktop table */}
       <table className="hidden w-full text-left text-sm md:table">
-        <thead className="border-b border-ink-200 bg-ink-50/60 text-xs uppercase tracking-wide text-ink-500">
+        <thead className="border-b border-ink-200 bg-ink-50/60 text-xs uppercase tracking-wide text-ink-600">
           <tr>
             <th className="px-4 py-3 font-medium">Project</th>
             <th className="px-4 py-3 font-medium">Client</th>
@@ -38,7 +38,7 @@ export function ProjectsTable({ projects, onEdit, onDelete }: ProjectsTableProps
               className="cursor-pointer hover:bg-ink-50/60"
             >
               <td className="px-4 py-3 font-medium text-ink-900">{project.name}</td>
-              <td className="px-4 py-3 text-ink-600">{project.client?.name || '—'}</td>
+              <td className="px-4 py-3 text-ink-700">{project.client?.name || '—'}</td>
               <td className="px-4 py-3">
                 <ProjectStatusBadge status={project.status} />
               </td>
@@ -48,10 +48,10 @@ export function ProjectsTable({ projects, onEdit, onDelete }: ProjectsTableProps
               <td className="px-4 py-3">
                 <div className="flex items-center gap-2">
                   <ProgressBar value={project.progress} className="w-20" />
-                  <span className="text-xs text-ink-500">{project.progress}%</span>
+                  <span className="text-xs text-ink-600">{project.progress}%</span>
                 </div>
               </td>
-              <td className="px-4 py-3 text-ink-500">{formatDate(project.deadline)}</td>
+              <td className="px-4 py-3 text-ink-600">{formatDate(project.deadline)}</td>
               <td className="px-4 py-3 text-right" onClick={(e) => e.stopPropagation()}>
                 <RowMenu
                   actions={[
@@ -81,7 +81,7 @@ export function ProjectsTable({ projects, onEdit, onDelete }: ProjectsTableProps
                 className="min-w-0 flex-1 text-left"
               >
                 <p className="truncate text-sm font-medium text-ink-900">{project.name}</p>
-                <p className="truncate text-sm text-ink-500">{project.client?.name || 'No client'}</p>
+                <p className="truncate text-sm text-ink-600">{project.client?.name || 'No client'}</p>
               </button>
               <RowMenu
                 actions={[
@@ -98,11 +98,11 @@ export function ProjectsTable({ projects, onEdit, onDelete }: ProjectsTableProps
             <div className="mt-2 flex flex-wrap items-center gap-2">
               <ProjectStatusBadge status={project.status} />
               <PriorityBadge priority={project.priority} />
-              <span className="text-xs text-ink-500">Due {formatDate(project.deadline)}</span>
+              <span className="text-xs text-ink-600">Due {formatDate(project.deadline)}</span>
             </div>
             <div className="mt-2 flex items-center gap-2">
               <ProgressBar value={project.progress} className="flex-1" />
-              <span className="text-xs text-ink-500">{project.progress}%</span>
+              <span className="text-xs text-ink-600">{project.progress}%</span>
             </div>
           </li>
         ))}

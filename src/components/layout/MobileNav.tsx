@@ -22,7 +22,7 @@ export function MobileNav() {
           type="button"
           onClick={() => setIsOpen(true)}
           aria-label="Open navigation menu"
-          className="rounded p-1.5 text-white/70 hover:bg-white/10 hover:text-white"
+          className="rounded p-1.5 text-white/90 hover:bg-white/10 hover:text-white"
         >
           <Menu className="h-5 w-5" />
         </button>
@@ -38,7 +38,7 @@ export function MobileNav() {
                 type="button"
                 onClick={() => setIsOpen(false)}
                 aria-label="Close navigation menu"
-                className="rounded p-1.5 text-white/60 hover:bg-white/10 hover:text-white"
+                className="rounded p-1.5 text-white/85 hover:bg-white/10 hover:text-white"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -54,7 +54,7 @@ export function MobileNav() {
                   className={({ isActive }) =>
                     cn(
                       'relative flex items-center gap-2.5 rounded-md px-3 py-2.5 text-sm font-medium transition-colors',
-                      isActive ? 'bg-white/10 text-white' : 'text-white/55 hover:bg-white/5 hover:text-white/90',
+                      isActive ? 'bg-white/10 text-white' : 'text-white/80 hover:bg-white/5 hover:text-white/90',
                     )
                   }
                 >
@@ -72,11 +72,11 @@ export function MobileNav() {
             </nav>
 
             <div className="border-t border-white/10 p-4">
-              <p className="truncate text-xs text-white/50">{user?.email}</p>
+              <p className="truncate text-xs text-white/75">{user?.email}</p>
               <button
                 type="button"
                 onClick={signOut}
-                className="mt-2 flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white"
+                className="mt-2 flex items-center gap-2 text-sm font-medium text-white/95 hover:text-white"
               >
                 <LogOut className="h-4 w-4" /> Sign out
               </button>
